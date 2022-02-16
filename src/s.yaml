@@ -36,10 +36,6 @@ vars:
 services:
   fc-nas-filemgr: # 业务名称/模块名称
     component: fc # 组件名称
-    actions:
-      post-deploy:
-        - run: s fc-nas-filemgr nas upload -r code/kodbox /mnt/nas/.fc-nas-filemgr
-          path: ./
     props: # 组件的属性值
       region: ${vars.region}
       service: ${vars.service}
