@@ -91,7 +91,7 @@ services:
         memorySize: 128
         instanceConcurrency: 1
         environmentVariables:
-          KODBOX_URL: ${framework.output.url.custom_domain[0].domain}
+          KODBOX_URL: ${fc-nas-filemgr.output.url.custom_domain[0].domain}
       triggers:
         - name: timerTrigger     
           type: timer   
