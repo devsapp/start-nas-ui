@@ -5,7 +5,7 @@ mkdir -p /tmp/log/nginx/
 mkdir -p /tmp/var/nginx/
 mkdir -p /tmp/var/sessions/
 
-chown -R www-data:www-data /mnt/nas/.fc-nas-filemgr/kodbox
+chown -R www-data:www-data /mnt/nas/.fc-nas-filemgr
 
 echo "start php-fpm"
 php-fpm7.4 -c /code/php.ini -y /code/php-fpm.conf
