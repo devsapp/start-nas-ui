@@ -2,7 +2,7 @@ Type: Application
 Name: start-nas-ui
 Provider:
   - 阿里云
-Version: 0.0.6
+Version: 0.0.7
 Description: 快速部署一个 NAS UI文件管理系统到阿里云函数计算
 HomePage: https://github.com/devsapp/start-nas-ui
 Tags:
@@ -14,3 +14,59 @@ Service:
   函数计算:
     Authorities:
       - 管理员权限
+Parameters:
+  region:
+    type: string
+    default: cn-hangzhou
+    description: 创建应用所在的地区
+    required: true
+    enum:
+      - cn-beijing
+      - cn-hangzhou
+      - cn-shanghai
+      - cn-qingdao
+      - cn-zhangjiakou
+      - cn-huhehaote
+      - cn-shenzhen
+      - cn-chengdu
+      - cn-hongkong
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-southeast-3
+      - ap-southeast-5
+      - ap-northeast-1
+      - eu-central-1
+      - eu-west-1
+      - us-west-1
+      - us-east-1
+      - ap-south-1
+  serviceName:
+    type: string
+    default: fc-nas-filemgr
+    description: 应用所属的函数计算服务
+    required: true
+  functionName:
+    type: string
+    default: kodbox
+    description: 应用的函数名称
+    required: true
+  vpcId:
+    type: string
+    default: ""
+    description: NAS 挂载点所在 VPC ID, 例如 vpc-bp1lynmabizqdgt4308dt
+    required: true
+  vswitchIds:
+    type: string
+    default: ""
+    description: NAS 挂载点所在虚拟交换机VSW ID, 例如 vsw-bp118hpcifmb1ngul79x1, 交换机最好在 FC 支持的可用区 https://help.aliyun.com/document_detail/72959.html
+    required: true
+  securityGroupId:
+    type: string
+    default: ""
+    description: 安全组, 通常默认创建的空安全组即可, 例如 sg-bp1cd2w08t3dy7nhrvtx
+    required: true
+  mountPointsServerAddr:
+    type: string
+    default: ""
+    description: NAS 挂载点地址
+    required: true

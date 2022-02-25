@@ -17,19 +17,19 @@ access: "{{ access }}"       #  秘钥别名
 vars:
   region: cn-hangzhou
   service:
-    name: fc-nas-filemgr
+    name: "{{ serviceName }}"
     description: 'Serverless Devs Web Framework Service'
     vpcConfig: 
-      securityGroupId: sg-bp1cd2w08t3dy7nhrvty
+      securityGroupId: "{{ securityGroupId }}"
       vswitchIds: 
-        - vsw-bp118hpcifmb1ngul79x2
-      vpcId: vpc-bp1lynmabizqdgt4308du
+        - "{{ vswitchIds }}"
+      vpcId: "{{ vpcId }}"
     nasConfig: 
       userId:      10003
       groupId:     10003
       mountPoints: 
         - 
-          serverAddr: 031274aed3-elb80.cn-hangzhou.nas.aliyuncs.com
+          serverAddr: "{{ mountPointsServerAddr }}"
           nasDir:     /
           fcDir:      /mnt/nas
 
@@ -40,7 +40,7 @@ services:
       region: ${vars.region}
       service: ${vars.service}
       function:
-        name: kodbox
+        name: "{{ functionName }}"
         description: 'Serverless Devs Web Framework kodbox  Function'
         codeUri: './code'
         runtime: custom
@@ -48,6 +48,12 @@ services:
         memorySize: 4096
         instanceConcurrency: 16
         instanceType: c1
+        customRuntimeConfig:
+          command:
+            - bash
+          args:
+            - '-c'
+            - '/code/start.sh'
       triggers:
         - name: httpTrigger
           type: http
