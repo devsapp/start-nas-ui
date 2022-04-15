@@ -35,15 +35,11 @@
     > 详细文档可以参考 [阿里云密钥配置文档](https://github.com/devsapp/fc/blob/main/docs/zh/config.md)
 3. 初始化项目：`s init start-nas-ui -d start-nas-ui`
 4. 进入项目后：
-   - 执行 `s fc-nas-filemgr nas upload -r code/kodbox /mnt/nas/.fc-nas-filemgr` 将 web 管理工程上传到 NAS
+   - 执行 `s fc-nas-filemgr nas upload -r code/kodbox/ /mnt/nas/.fc-nas-filemgr` 将 web 管理工程上传到 NAS
    - 部署：`s deploy`
 5. 部署过程中可能需要阿里云密钥的支持，部署完成之后会获得到临时域名可供测试
 
 > 浏览器打开域名登录，默认初始化账号和密码是 admin/admin， 您可以登录后， 就得到一个 web 版 windows 用户体验的文件管理系统
-
-![](https://img.alicdn.com/imgextra/i3/O1CN01WRjMv428OKNAu7gjq_!!6000000007922-2-tps-1733-1007.png)
-
-> 在本地使用该项目时，不仅可以部署，还可以进行更多的操作，例如查看日志，查看指标，进行多种模式的调试等，这些操作详情可以参考[函数计算组件命令文档](https://github.com/devsapp/fc#%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3) ;
 
 ## 项目使用注意事项
 
@@ -60,12 +56,15 @@
 
 ![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01FbMHNY1PvcSGTBzmB_!!6000000001903-2-tps-2520-920.png)
 
-此时，打开案例地址， 使用 admin/admin 登录:
+此时，打开案例地址， 使用 `admin/admin` 登录，就得到一个 web 版 windows 用户体验的文件管理系统, 可以实现对指定 NAS 的管理和增加 OSS Bucket 挂载， 实现对多个 Bucket 的管理。
 
+**NAS 管理**
 ![](https://img.alicdn.com/imgextra/i3/O1CN01WRjMv428OKNAu7gjq_!!6000000007922-2-tps-1733-1007.png)
 
-添加 OSS Bucket 管理：
+**添加 OSS Bucket 管理**
 ![](https://img.alicdn.com/imgextra/i2/O1CN01e6dygX1znDLioRfQe_!!6000000006758-2-tps-1210-756.png)
+
+> 在本地使用该项目时，不仅可以部署，还可以进行更多的操作，例如查看日志，查看指标，进行多种模式的调试等，这些操作详情可以参考[函数计算组件命令文档](https://github.com/devsapp/fc#%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3) ;
 
 ## 参考
 使用开源的 UI 文件管理系统: [https://github.com/kalcaddle/kodbox](https://github.com/kalcaddle/kodbox)
