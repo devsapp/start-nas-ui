@@ -2,7 +2,7 @@ Type: Application
 Name: start-nas-ui
 Provider:
   - 阿里云
-Version: 0.0.11
+Version: 0.0.12
 Description: 快速部署一个 NAS UI文件管理系统到阿里云函数计算
 HomePage: https://github.com/devsapp/start-nas-ui
 Tags:
@@ -13,7 +13,16 @@ Category: Web框架
 Service:
   函数计算:
     Authorities:
-      - 管理员权限
+      - AliyunFCFullAccess
+  硬盘挂载:
+    Authorities:
+      - AliyunNASFullAccess
+  VPC:
+    Authorities:
+      - AliyunVPCReadOnlyAccess
+  其它:
+    Authorities:
+      - AliyunECSNetworkInterfaceManagementAccess
 Parameters:
   type: object
   additionalProperties: false # 不允许增加其他属性
