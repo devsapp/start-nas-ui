@@ -2,7 +2,7 @@ Type: Application
 Name: start-nas-ui
 Provider:
   - 阿里云
-Version: 0.0.14
+Version: 0.0.15
 Description: 快速部署一个 NAS UI文件管理系统到阿里云函数计算
 HomePage: https://github.com/devsapp/start-nas-ui
 Tags:
@@ -79,7 +79,7 @@ Parameters:
       title: 交换机 Id
       type: string
       default: ""
-      description: NAS 挂载点所在虚拟交换机VSW ID, 例如 vsw-bp118hpcifmb1ngul79x1, 交换机最好在 FC 支持的可用区 https://help.aliyun.com/document_detail/72959.html
+      description: NAS 挂载点所在虚拟交换机VSW ID, 交换机最好在 FC 支持的可用区
     securityGroupId:
       title: 安全组 Id
       type: string
