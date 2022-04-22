@@ -1,3 +1,8 @@
+## 🚀 一键部署
+您可以点击 点击`一键部署`按钮,进行快速体验
+
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui)
+
 # Serverless NAS+OSS UI文件管理系统案例
 
 > 快速部署和体验Serverless架构下的 UI FileManager 项目
@@ -34,9 +39,7 @@
 2. 配置密钥信息：`s config add`
     > 详细文档可以参考 [阿里云密钥配置文档](https://github.com/devsapp/fc/blob/main/docs/zh/config.md)
 3. 初始化项目：`s init start-nas-ui -d start-nas-ui`
-4. 进入项目后：
-   - 执行 `s fc-nas-filemgr nas upload -r code/kodbox/ /mnt/nas/.fc-nas-filemgr` 将 web 管理工程上传到 NAS
-   - 部署：`s deploy`
+4. 进入项目后：`s deploy`
 5. 部署过程中可能需要阿里云密钥的支持，部署完成之后会获得到临时域名可供测试
 
 > 浏览器打开域名登录，默认初始化账号和密码是 admin/admin， 您可以登录后， 就得到一个 web 版 windows 用户体验的文件管理系统
