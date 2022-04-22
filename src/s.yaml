@@ -22,7 +22,7 @@ vars:
     vpcConfig: 
       securityGroupId: "{{ securityGroupId }}"
       vswitchIds: 
-        - "{{ vswitchIds }}"
+        - "{{ vswitchId }}"
       vpcId: "{{ vpcId }}"
     nasConfig: 
       userId:      10003
