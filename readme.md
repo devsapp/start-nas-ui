@@ -38,7 +38,8 @@
     > 详细文档可以参考 [Serverless Devs 安装文档](https://github.com/Serverless-Devs/Serverless-Devs/blob/master/docs/zh/install.md)
 2. 配置密钥信息：`s config add`
     > 详细文档可以参考 [阿里云密钥配置文档](https://github.com/devsapp/fc/blob/main/docs/zh/config.md)
-3. 初始化项目：`s init start-nas-ui -d start-nas-ui`
+3. 初始化项目：`s init start-nas-ui -d start-nas-ui`, 按照提示， 在命令行交互式中输入您的 NAS 挂载点和对应的 vpc 信息
+  ![](https://img.alicdn.com/imgextra/i4/O1CN01798jXu21VveDo7w8h_!!6000000006991-2-tps-981-455.png)
 4. 进入项目后：`s deploy`
 5. 部署过程中可能需要阿里云密钥的支持，部署完成之后会获得到临时域名可供测试
 
@@ -48,6 +49,35 @@
 
 1. 项目Yaml中，声明了`actions`，并且将 Web UI FileManager 工程上传到 NAS，执行函数的时候， nginx 配置 `root /mnt/nas/.fc-nas-filemgr;` 指定了 web 的目录在 NAS 上。
 2. 该示例中默认使用 sqlite 数据库 (位于 NAS)
+3. NAS 挂载点的交换机最好在 FC 的可用区， 或者在对应的 VPC 里面新增一个 FC 支持的可用区的交换机
+
+<details>
+<summary>函数计算支持的可用区</summary>
+
+| **地域** | **地域ID** | **函数计算支持的可用区** |
+| --- | --- | --- |
+| 华东1（杭州） | cn-hangzhou | cn-hangzhou-f、cn-hangzhou-g、cn-hangzhou-h |
+| 华东2（上海） | cn-shanghai | cn-shanghai-b、cn-shanghai-e、cn-shanghai-g、cn-shanghai-f |
+| 华北1（青岛） | cn-qingdao | cn-qingdao-c |
+| 华北2（北京） | cn-beijing | cn-beijing-h、cn-beijing-c、cn-beijing-e、cn-beijing-f |
+| 华北3（张家口） | cn-zhangjiakou | cn-zhangjiakou-b、cn-zhangjiakou-a |
+| 华北5（呼和浩特） | cn-huhehaote | cn-huhehaote-a、cn-huhehaote-b |
+| 华南1（深圳） | cn-shenzhen | cn-shenzhen-e、cn-shenzhen-d |
+| 西南1（成都） | cn-chengdu | cn-chengdu-a、 cn-chengdu-b |
+| 中国香港 | cn-hongkong | cn-hongkong-c |
+| 新加坡 | ap-southeast-1 | ap-southeast-1a、ap-southeast-1b |
+| 澳大利亚（悉尼） | ap-southeast-2 | ap-southeast-2a、ap-southeast-2b |
+| 马来西亚（吉隆坡） | ap-southeast-3 | ap-southeast-3a |
+| 印度尼西亚（雅加达） | ap-southeast-5 | ap-southeast-5a、ap-southeast-5b |
+| 日本（东京） | ap-northeast-1 | ap-northeast-1b、ap-northeast-1a |
+| 英国（伦敦） | eu-west-1 | eu-west-1a |
+| 德国（法兰克福） | eu-central-1 | eu-central-a、eu-central-1a、eu-central-1b |
+| 美国（硅谷） | us-west-1 | us-west-1a、us-west-1b |
+| 美国（弗吉尼亚） | us-east-1 | us-east-1b、us-east-1a |
+| 印度（孟买） | ap-south-1 | ap-south-1a、ap-south-1b |
+</details>
+
+[文档详情](https://help.aliyun.com/document_detail/72959.html)
 
 ## 应用详情
 
