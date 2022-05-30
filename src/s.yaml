@@ -86,7 +86,7 @@ services:
     component: fc  # 组件名称
     actions:
       post-deploy: 
-        - run: s helper invoke
+        - run: fc invoke
           path: ./
     props: # 组件的属性值
       region: ${vars.region}
