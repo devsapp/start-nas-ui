@@ -31,8 +31,8 @@ vars:
         - "{{ vswitchId }}"
       vpcId: "{{ vpcId }}"
     nasConfig: 
-      userId:      10003
-      groupId:     10003
+      userId:      0
+      groupId:     0
       mountPoints: 
         - 
           serverAddr: "{{ mountPointsServerAddr }}"
@@ -57,6 +57,7 @@ services:
         timeout: 7200
         memorySize: 3072
         instanceConcurrency: 16
+        caPort: 80
         customRuntimeConfig:
           command:
             - bash

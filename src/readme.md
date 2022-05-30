@@ -94,7 +94,7 @@
 
 ![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01FbMHNY1PvcSGTBzmB_!!6000000001903-2-tps-2520-920.png)
 
-此时，打开案例地址， 使用 `admin/admin` 登录，就得到一个 web 版 windows 用户体验的文件管理系统, 可以实现对指定 NAS 的管理和增加 OSS Bucket 挂载， 实现对多个 Bucket 的管理。
+此时，打开案例地址， 使用默认 `admin/admin` 登录（登录后及时改成自己的密码），就得到一个 web 版 windows 用户体验的文件管理系统, 可以实现对指定 NAS 的管理和增加 OSS Bucket 挂载， 实现对多个 Bucket 的管理。
 
 **NAS 管理**
 ![](https://img.alicdn.com/imgextra/i3/O1CN01WRjMv428OKNAu7gjq_!!6000000007922-2-tps-1733-1007.png)
