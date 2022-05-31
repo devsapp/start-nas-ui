@@ -14,22 +14,33 @@
 
 <description>
 
-> ***快速部署一个 NAS UI文件管理系统到阿里云函数计算***
+> ***通过函数计算快速部署一个如Windows 可视化的能浏览、编辑、上传和下载NAS中的文件的应用***
 
 </description>
 
 <table>
-
-
-
 </table>
 
 <codepre id="codepre">
-
 </codepre>
 
 <deploy>
 
+## Notice
+#### 费用详情
+1. 函数计算计算资源每个月都有40万 GB-秒 免费额度， 如果是操作 NAS 文档相关， 每个月的免费额度一般够用。
+2. 函数计算请求响应流量为 0.5元/GB。
+    > 上传文件属于入流量，不计费， 只有下载文件和应用本身网页(占比很小)消耗流量。
+#### 使用快速须知
+1. 部署成功后， 打开 url 地址，按照安装指引完整安装，就得到一个 web 版 windows 用户体验的文件管理系统。
+  ![](https://img.alicdn.com/imgextra/i1/O1CN01m3G1Ur1CrPpd6wurx_!!6000000000134-2-tps-1034-1078.png)
+2. 快捷进入 NAS 根目录管理
+  ![](https://img.alicdn.com/imgextra/i1/O1CN013QtzXr1HCGK5I5qh7_!!6000000000721-2-tps-1280-712.png)
+3. 其他 Tips:
+   - 对 NAS 目录进行文件操作的 uid 和 gid 都是 33，即 linux 系统中的 www-data
+   - 进入管理页面后，可以点击左上角的 kod 图标从管理页面返回首页。
+   - 如果升级提醒，一般建议直接忽视。
+   - 一个 NAS 盘最好对应一个新的函数计算服务， 不要部署多个应用对应不同的 NAS 盘但是 SeerviceName 是一样的
 ## 部署 & 体验
 
 <appcenter>
@@ -49,12 +60,12 @@
 <appdetail id="flushContent">
 
 # 应用详情
-
 ## 项目使用注意事项
-
-1. 项目Yaml中，声明了`actions`，并且将 Web UI FileManager 工程上传到 NAS，执行函数的时候， nginx 配置 `root /mnt/nas/.fc-nas-filemgr;` 指定了 web 的目录在 NAS 上。
-2. 该示例中默认使用 sqlite 数据库 (位于 NAS)
-3. NAS 挂载点的交换机最好在 FC 的可用区， 或者在对应的 VPC 里面新增一个 FC 支持的可用区的交换机
+1. 项目默认部署了一个 keep-warm 函数，如果您想优化冷启动体验（冷启动大约 10s-20s），可以打开定时触发器启用， 会增加一点计算资源消耗。
+    ![](https://img.alicdn.com/imgextra/i2/O1CN01LzMzc71te9qJtBaMf_!!6000000005926-2-tps-1741-392.png)
+2. 项目Yaml中，声明了`actions`，并且将 Web UI FileManager 工程上传到 NAS，执行函数的时候， nginx 配置 `root /mnt/nas/.fc-nas-filemgr;` 指定了 web 的目录在 NAS 上。
+3. 该示例中默认使用 sqlite 数据库 (位于 NAS)。
+4. NAS 挂载点的交换机最好在 FC 的可用区， 或者在对应的 VPC 里面新增一个 FC 支持的可用区的交换机。
 
 <details>
 <summary>函数计算支持的可用区</summary>
@@ -87,17 +98,17 @@
 ## 应用详情
 
 本项目是将世界上最好用的 UI FileManager 项目部署到阿里云 Serverless 平台（函数计算 FC）。
-
 通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
-
 部署完成之后，您可以看到系统返回给您的案例地址，例如：
-
 ![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01FbMHNY1PvcSGTBzmB_!!6000000001903-2-tps-2520-920.png)
 
-此时，打开案例地址， 使用默认 `admin/admin` 登录（登录后及时改成自己的密码），就得到一个 web 版 windows 用户体验的文件管理系统, 可以实现对指定 NAS 的管理和增加 OSS Bucket 挂载， 实现对多个 Bucket 的管理。
-
-**NAS 管理**
-![](https://img.alicdn.com/imgextra/i3/O1CN01WRjMv428OKNAu7gjq_!!6000000007922-2-tps-1733-1007.png)
+1. 部署成功后， 打开 domain url 地址，按照安装指引完整安装，就得到一个 web 版 windows 用户体验的文件管理系统。
+  ![](https://img.alicdn.com/imgextra/i1/O1CN01m3G1Ur1CrPpd6wurx_!!6000000000134-2-tps-1034-1078.png)
+2. 快捷进入 NAS 根目录管理
+  ![](https://img.alicdn.com/imgextra/i1/O1CN013QtzXr1HCGK5I5qh7_!!6000000000721-2-tps-1280-712.png)
+3. 其他 Tips:
+   - 进入管理页面后，可以点击左上角的 kod 图标从管理页面返回首页。
+   - 如果升级提醒，一般建议直接忽视。
 
 **添加 OSS Bucket 管理**
 ![](https://img.alicdn.com/imgextra/i2/O1CN01e6dygX1znDLioRfQe_!!6000000006758-2-tps-1210-756.png)
