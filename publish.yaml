@@ -74,7 +74,7 @@ Parameters:
       title: NAS挂载点地址
       type: string
       default: ""
-      description: NAS 挂载点地址，可以登录 <a href="https://nasnext.console.aliyun.com">NAS控制台</a> 查看
+      description: NAS 挂载点地址，可以登录 <a href="https://nasnext.console.aliyun.com" target="_blank">NAS控制台</a> 查看
     vpcId:
       title: VPC Id
       type: string
@@ -89,5 +89,5 @@ Parameters:
       title: 安全组 Id
       type: string
       default: ""
-      description: 登录 <a href="https://ecs.console.aliyun.com/#/securityGroup/region/cn-hangzhou">安全组</a> 查看, 通常默认创建的空安全组即可(注意和上面地域相同), 例如 sg-bp1cd2w08t3dy7nhrvtx
+      description: 登录 <a href="https://ecs.console.aliyun.com/#/securityGroup/region/cn-hangzhou" target="_blank">安全组</a> 查看, 通常默认创建的空安全组即可(注意和上面地域相同), 例如 sg-bp1cd2w08t3dy7nhrvtx
 
