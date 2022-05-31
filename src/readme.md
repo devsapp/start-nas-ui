@@ -34,7 +34,7 @@
     > 上传文件属于入流量，不计费， 只有下载文件和应用本身网页(占比很小)消耗流量。
 #### 使用快速须知
 1. 部署成功后， 打开 url 地址，按照安装指引完整安装，就得到一个 web 版 windows 用户体验的文件管理系统。
-  ![](https://img.alicdn.com/imgextra/i1/O1CN01m3G1Ur1CrPpd6wurx_!!6000000000134-2-tps-1034-1078.png)
+  ![](https://img.alicdn.com/imgextra/i2/O1CN01KkJoBE1PbT2w3zmxb_!!6000000001859-2-tps-1034-832.png)
 2. 快捷进入 NAS 根目录管理
   ![](https://img.alicdn.com/imgextra/i1/O1CN013QtzXr1HCGK5I5qh7_!!6000000000721-2-tps-1280-712.png)
 3. 其他 Tips:
