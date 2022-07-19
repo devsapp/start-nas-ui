@@ -60,124 +60,34 @@
 
 <appdetail id="flushContent">
 
-# start-nas-ui 帮助文档
+# 应用详情
 
-<p align="center" class="flex justify-center">
-    <a href="https://www.serverless-devs.com" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageType">
-  </a>
-  <a href="http://www.devsapp.cn/details.html?name=start-nas-ui" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageVersion">
-  </a>
-  <a href="http://www.devsapp.cn/details.html?name=start-nas-ui" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageDownload">
-  </a>
-</p>
+本项目是将世界上最好用的 UI FileManager 项目部署到阿里云 Serverless 平台（函数计算 FC）。
+通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
 
-<description>
-
-> ***通过函数计算快速部署一个如Windows 可视化的能浏览、编辑、上传和下载NAS中的文件的应用***
-
-</description>
-
-<table>
-
-## 前期准备
-使用该项目，推荐您拥有以下的产品权限 / 策略：
-
-| 服务/业务 | 函数计算 |  硬盘挂载 |  VPC |  其它 |     
-| --- |  --- |   --- |   --- |   --- |   
-| 权限/策略 | AliyunFCFullAccess |  AliyunNASFullAccess |  AliyunVPCReadOnlyAccess |  AliyunECSFullAccess |     
-
-
-</table>
-
-<codepre id="codepre">
-
-
-
-</codepre>
-
-<deploy>
-
-## 部署 & 体验
-
-<appcenter>
-
-- :fire: 通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui) ，
-[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui)  该应用。 
-
-</appcenter>
-
-- 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
-    - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://www.serverless-devs.com/fc/config) ；
-    - 初始化项目：`s init start-nas-ui -d start-nas-ui`   
-    - 进入项目，并进行项目部署：`cd start-nas-ui && s deploy -y`
-
-</deploy>
-
-<appdetail id="flushContent">
-
-# start-nas-ui 帮助文档
-
-<p align="center" class="flex justify-center">
-    <a href="https://www.serverless-devs.com" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageType">
-  </a>
-  <a href="http://www.devsapp.cn/details.html?name=start-nas-ui" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageVersion">
-  </a>
-  <a href="http://www.devsapp.cn/details.html?name=start-nas-ui" class="ml-1">
-    <img src="http://editor.devsapp.cn/icon?package=start-nas-ui&type=packageDownload">
-  </a>
-</p>
-
-<description>
-
-> ***通过函数计算快速部署一个如Windows 可视化的能浏览、编辑、上传和下载NAS中的文件的应用***
-
-</description>
-
-<table>
-
-## 前期准备
-使用该项目，推荐您拥有以下的产品权限 / 策略：
-
-| 服务/业务 | 函数计算 |  硬盘挂载 |  VPC |  其它 |     
-| --- |  --- |   --- |   --- |   --- |   
-| 权限/策略 | AliyunFCFullAccess |  AliyunNASFullAccess |  AliyunVPCFullAccess |  AliyunECSFullAccess |     
-
-
-</table>
-
-<codepre id="codepre">
-</codepre>
-
-<deploy>
-
-## 部署 & 体验
-
-<appcenter>
-
-- :fire: 通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui) ，
-[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui)  该应用。 
+通过 [Serverless 应用中心](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui) ，
+[![Deploy with Severless Devs](https://img.alicdn.com/imgextra/i1/O1CN01w5RFbX1v45s8TIXPz_!!6000000006118-55-tps-95-28.svg)](https://fcnext.console.aliyun.com/applications/create?template=start-nas-ui)  该应用
 
 ![](https://img.alicdn.com/imgextra/i3/O1CN01FKvi6D1KrQmUy2L80_!!6000000001217-2-tps-1465-982.png)
 
 > 函数计算各region可用区请参考: [https://help.aliyun.com/document_detail/72959.html](https://help.aliyun.com/document_detail/72959.html)
 
-</appcenter>
+部署完成之后，您可以看到系统返回给您的案例地址，例如：
+![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01FbMHNY1PvcSGTBzmB_!!6000000001903-2-tps-2520-920.png)
 
-- 通过 [Serverless Devs Cli](https://www.serverless-devs.com/serverless-devs/install) 进行部署：
-    - [安装 Serverless Devs Cli 开发者工具](https://www.serverless-devs.com/serverless-devs/install) ，并进行[授权信息配置](https://www.serverless-devs.com/fc/config) ；
-    - 初始化项目：`s init start-nas-ui -d start-nas-ui`   
-    - 进入项目，并进行项目部署：`cd start-nas-ui && s deploy -y`
+1. 部署成功后， 打开 domain url 地址，按照安装指引完整安装（数据库配置选择 PDO），就得到一个 web 版 windows 用户体验的文件管理系统。
+ ![](https://img.alicdn.com/imgextra/i2/O1CN01KkJoBE1PbT2w3zmxb_!!6000000001859-2-tps-1034-832.png)
+2. 快捷进入 NAS 根目录管理
+  ![](https://img.alicdn.com/imgextra/i1/O1CN013QtzXr1HCGK5I5qh7_!!6000000000721-2-tps-1280-712.png)
+3. 其他 Tips:
+   - 进入管理页面后，可以点击左上角的 kod 图标从管理页面返回首页。
+   - 如果升级提醒，一般建议直接忽视。
+   - 一个 NAS 盘最好对应一个新的函数计算服务， 不要部署多个应用对应不同的 NAS 盘但是 SeerviceName 是一样的
 
-</deploy>
+**添加 OSS Bucket 管理**
+![](https://img.alicdn.com/imgextra/i2/O1CN01e6dygX1znDLioRfQe_!!6000000006758-2-tps-1210-756.png)
 
-<appdetail id="flushContent">
-
-## 项目使用费用及注意事项
+> 在本地使用该项目时，不仅可以部署，还可以进行更多的操作，例如查看日志，查看指标，进行多种模式的调试等，这些操作详情可以参考[函数计算组件命令文档](https://github.com/devsapp/fc#%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3) ;
 
 #### 费用详情
 1. 函数计算计算资源每个月都有40万 GB-秒 免费额度
@@ -220,65 +130,8 @@
 
 [文档详情](https://help.aliyun.com/document_detail/72959.html)
 
-## 应用详情
-本项目是将世界上最好用的 UI FileManager 项目部署到阿里云 Serverless 平台（函数计算 FC）。
-通过 Serverless Devs 开发者工具，您只需要几步，就可以体验 Serverless 架构，带来的降本提效的技术红利。
-部署完成之后，您可以看到系统返回给您的案例地址，例如：
-![图片alt](https://img.alicdn.com/imgextra/i1/O1CN01FbMHNY1PvcSGTBzmB_!!6000000001903-2-tps-2520-920.png)
-
-1. 部署成功后， 打开 domain url 地址，按照安装指引完整安装（数据库配置选择 PDO），就得到一个 web 版 windows 用户体验的文件管理系统。
- ![](https://img.alicdn.com/imgextra/i2/O1CN01KkJoBE1PbT2w3zmxb_!!6000000001859-2-tps-1034-832.png)
-2. 快捷进入 NAS 根目录管理
-  ![](https://img.alicdn.com/imgextra/i1/O1CN013QtzXr1HCGK5I5qh7_!!6000000000721-2-tps-1280-712.png)
-3. 其他 Tips:
-   - 进入管理页面后，可以点击左上角的 kod 图标从管理页面返回首页。
-   - 如果升级提醒，一般建议直接忽视。
-   - 一个 NAS 盘最好对应一个新的函数计算服务， 不要部署多个应用对应不同的 NAS 盘但是 SeerviceName 是一样的
-
-**添加 OSS Bucket 管理**
-![](https://img.alicdn.com/imgextra/i2/O1CN01e6dygX1znDLioRfQe_!!6000000006758-2-tps-1210-756.png)
-
-> 在本地使用该项目时，不仅可以部署，还可以进行更多的操作，例如查看日志，查看指标，进行多种模式的调试等，这些操作详情可以参考[函数计算组件命令文档](https://github.com/devsapp/fc#%E6%96%87%E6%A1%A3%E7%9B%B8%E5%85%B3) ;
-
 ## 参考
 使用开源的 UI 文件管理系统: [https://github.com/kalcaddle/kodbox](https://github.com/kalcaddle/kodbox)
-
-
-</appdetail>
-
-<devgroup>
-
-## 开发者社区
-
-您如果有关于错误的反馈或者未来的期待，您可以在 [Serverless Devs repo Issues](https://github.com/serverless-devs/serverless-devs/issues) 中进行反馈和交流。如果您想要加入我们的讨论组或者了解 FC 组件的最新动态，您可以通过以下渠道进行：
-
-<p align="center">
-
-| <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407298906_20211028074819117230.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407044136_20211028074404326599.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407252200_20211028074732517533.png" width="130px" > |
-|--- | --- | --- |
-| <center>微信公众号：`serverless`</center> | <center>微信小助手：`xiaojiangwh`</center> | <center>钉钉交流群：`33947367`</center> | 
-
-</p>
-
-</devgroup>
-
-</appdetail>
-
-<devgroup>
-
-## 开发者社区
-
-您如果有关于错误的反馈或者未来的期待，您可以在 [Serverless Devs repo Issues](https://github.com/serverless-devs/serverless-devs/issues) 中进行反馈和交流。如果您想要加入我们的讨论组或者了解 FC 组件的最新动态，您可以通过以下渠道进行：
-
-<p align="center">
-
-| <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407298906_20211028074819117230.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407044136_20211028074404326599.png" width="130px" > | <img src="https://serverless-article-picture.oss-cn-hangzhou.aliyuncs.com/1635407252200_20211028074732517533.png" width="130px" > |
-|--- | --- | --- |
-| <center>微信公众号：`serverless`</center> | <center>微信小助手：`xiaojiangwh`</center> | <center>钉钉交流群：`33947367`</center> | 
-
-</p>
-
-</devgroup>
 
 </appdetail>
 
