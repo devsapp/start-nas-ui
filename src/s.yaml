@@ -40,12 +40,26 @@ vars:
           fcDir:      /mnt/nas
 
 services:
-  fc-nas-filemgr: # 业务名称/模块名称
+  fc-nas-init:
+    component: fc
+    props:
+      region: ${vars.region} # 关于变量的使用方法，可以参考：https://www.serverless-devs.com/serverless-devs/yaml#变量赋值
+      service: ${vars.service}
+      function:
+        name: "nas-init"
+        description: 'Prepare nas'
+        codeUri: './code/init'
+        runtime: python3.9
+        timeout: 1200
+        memorySize: 3072
+        instanceConcurrency: 1
+        handler: index.handler
+
+  nas-filemgr: # 业务名称/模块名称
     component: fc # 组件名称
     actions:
       post-deploy:
-        # 请注意这里上传的路径，如果之前已经挂载了这个nas，并且上传过这个文件夹，会导致文件的覆盖
-        - component: fc nas upload -ro code/kodbox/ /mnt/nas/.fc-nas-filemgr
+        - component: fc invoke --service-name ${fc-nas-init.output.service.name} --function-name nas-init
     props: # 组件的属性值
       region: ${vars.region}
       service: ${vars.service}
@@ -53,7 +67,7 @@ services:
         # name: "{{ functionName }}"
         name: kodbox
         description: 'Serverless Devs Web Framework kodbox  Function'
-        codeUri: './code'
+        codeUri: './code/kodbox'
         runtime: custom
         timeout: 7200
         memorySize: 1536
@@ -83,7 +97,7 @@ services:
           routeConfigs:
             - path: /*
 
-  helper: # 辅助函数, 2 min 定时预热
+  keep-warm: # 辅助函数, 2 min 定时预热
     component: fc  # 组件名称
     actions:
       post-deploy: 
@@ -94,13 +108,13 @@ services:
       function:
         name: keep-warm
         description: 'Serverless Devs Web Framework Helper Function'
-        codeUri: './helper'
+        codeUri: './code/keep-warm'
         runtime: python3
         timeout: 300
         memorySize: 128
         instanceConcurrency: 1
         environmentVariables:
-          KODBOX_URL: ${fc-nas-filemgr.output.url.system_url}
+          KODBOX_URL: ${nas-filemgr.output.url.system_url}
       triggers:
         - name: timerTrigger     
           type: timer   
